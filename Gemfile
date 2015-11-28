@@ -32,6 +32,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# debug gems
+group :development do
+  gem 'awesome_print', require: 'ap'
+  gem 'peek'
+  gem 'better_errors'
+  gem 'pry-rails'
+  gem 'quiet_assets'
+  gem 'bullet'
+end
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
