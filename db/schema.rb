@@ -50,8 +50,15 @@ ActiveRecord::Schema.define(version: 20151128122810) do
     t.string   "name"
     t.string   "research_tags"
     t.text     "about"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "university_name"
+    t.string   "url"
+    t.text     "css"
+    t.text     "js"
+    t.text     "layout"
+    t.string   "logo"
+    t.string   "index_page_path"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "pages", force: :cascade do |t|
