@@ -1,3 +1,5 @@
+# Migration for create studens plan
+# @author nav-mike
 class CreateStdPlans < ActiveRecord::Migration
   def change
     create_table :std_plans do |t|

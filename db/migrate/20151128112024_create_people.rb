@@ -1,3 +1,5 @@
+# Migration for create people
+# @author nav-mike
 class CreatePeople < ActiveRecord::Migration
   def change
     create_table :people do |t|

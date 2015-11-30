@@ -16,7 +16,7 @@ ActiveAdmin.register Page do
     unless f.object.new_record?
       panel 'Ontology' do
         inputs do
-          f.input :uri, input_html: { disabled: true }, label: 'URI'
+          f.input :uri, input_html: {disabled: true}, label: 'URI'
         end
       end
     end

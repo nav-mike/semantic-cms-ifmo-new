@@ -1,3 +1,5 @@
+# Migration for create projects
+# @author nav-mike
 class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|

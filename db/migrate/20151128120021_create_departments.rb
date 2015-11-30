@@ -1,3 +1,5 @@
+# Migration for create department
+# @author nav-mike
 class CreateDepartments < ActiveRecord::Migration
   def change
     create_table :departments do |t|
