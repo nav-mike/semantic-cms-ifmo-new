@@ -126,10 +126,12 @@ ActiveRecord::Schema.define(version: 20151128122810) do
   end
 
   create_table "std_groups", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "std_groups", ["title"], name: "index_std_groups_on_title"
 
   create_table "std_plans", force: :cascade do |t|
     t.string   "title",       null: false
