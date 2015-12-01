@@ -105,7 +105,7 @@ ActiveRecord::Schema.define(version: 20151128122810) do
     t.string   "keywords"
     t.boolean  "status"
     t.string   "title"
-    t.string   "name"
+    t.string   "name",        null: false
     t.string   "logo"
     t.date     "start_date"
     t.date     "end_date"
