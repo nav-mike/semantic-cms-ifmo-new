@@ -132,13 +132,15 @@ ActiveRecord::Schema.define(version: 20151128122810) do
   end
 
   create_table "std_plans", force: :cascade do |t|
-    t.string   "title"
-    t.string   "year"
-    t.string   "link"
+    t.string   "title",       null: false
+    t.string   "year",        null: false
+    t.string   "link",        null: false
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "std_plans", ["year"], name: "index_std_plans_on_year"
 
   create_table "students", force: :cascade do |t|
     t.string   "name"
