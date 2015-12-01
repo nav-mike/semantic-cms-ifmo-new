@@ -143,11 +143,13 @@ ActiveRecord::Schema.define(version: 20151128122810) do
   add_index "std_plans", ["year"], name: "index_std_plans_on_year"
 
   create_table "students", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.string   "email"
     t.string   "vrbmd"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "students", ["name"], name: "index_students_on_name"
 
 end

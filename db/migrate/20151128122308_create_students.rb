@@ -3,9 +3,9 @@
 class CreateStudents < ActiveRecord::Migration
   def change
     create_table :students do |t|
-      t.string :name
-      t.string :email
-      t.string :vrbmd
+      t.string :name, index: true, null: false
+      t.string :email, null: true
+      t.string :vrbmd, null: true
 
       t.timestamps null: false
     end
