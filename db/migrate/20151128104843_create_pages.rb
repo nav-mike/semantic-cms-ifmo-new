@@ -3,11 +3,11 @@
 class CreatePages < ActiveRecord::Migration
   def change
     create_table :pages do |t|
-      t.string :name
-      t.string :path
-      t.string :title
+      t.string :name, index: true, null: false
+      t.string :path, null: false
+      t.string :title, null: false
       t.text :html
-      t.string :uri
+      t.string :uri, index: true, null: false
 
       t.timestamps null: false
     end

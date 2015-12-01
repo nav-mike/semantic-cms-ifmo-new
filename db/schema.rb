@@ -62,14 +62,17 @@ ActiveRecord::Schema.define(version: 20151128122810) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.string   "name"
-    t.string   "path"
-    t.string   "title"
+    t.string   "name",       null: false
+    t.string   "path",       null: false
+    t.string   "title",      null: false
     t.text     "html"
-    t.string   "uri"
+    t.string   "uri",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "pages", ["name"], name: "index_pages_on_name"
+  add_index "pages", ["uri"], name: "index_pages_on_uri"
 
   create_table "people", force: :cascade do |t|
     t.string   "linkedin"
