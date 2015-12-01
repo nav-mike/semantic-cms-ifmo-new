@@ -3,26 +3,26 @@
 class CreatePeople < ActiveRecord::Migration
   def change
     create_table :people do |t|
-      t.string :linkedin
-      t.string :google_plus
-      t.string :scopus
-      t.string :university
+      t.string :linkedin, null: true, default: nil
+      t.string :google_plus, null: true, default: nil
+      t.string :scopus, null: true, default: nil
+      t.string :university, null: false
       t.string :awards
-      t.string :impact_story
-      t.string :google_scholar
-      t.string :cv
-      t.string :orcid
-      t.string :name
+      t.string :impact_story, null: true, default: nil
+      t.string :google_scholar, null: true, default: nil
+      t.string :cv, null: true, default: nil
+      t.string :orcid, null: true, default: nil
+      t.string :name, index: true, null:false
       t.text :biography
-      t.string :email
-      t.string :room
-      t.string :laboratory
-      t.string :website
-      t.string :github
-      t.string :education
-      t.string :twitter
-      t.string :photo
-      t.string :fb
+      t.string :email, null: true, default: nil
+      t.string :room, null: true, default: nil
+      t.string :laboratory, null: true, default: nil
+      t.string :website, null: true, default: nil
+      t.string :github, null: true, default: nil
+      t.string :education, null: true, default: nil
+      t.string :twitter, null: true, default: nil
+      t.string :photo, null: true, default: nil
+      t.string :fb, null: true, default: nil
 
       t.timestamps null: false
     end
