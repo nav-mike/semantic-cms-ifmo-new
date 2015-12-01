@@ -47,19 +47,21 @@ ActiveRecord::Schema.define(version: 20151128122810) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "departments", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",            null: false
     t.string   "research_tags"
     t.text     "about"
-    t.string   "university_name"
+    t.string   "university_name", null: false
     t.string   "url"
     t.text     "css"
     t.text     "js"
     t.text     "layout"
-    t.string   "logo"
-    t.string   "index_page_path"
+    t.string   "logo",            null: false
+    t.string   "index_page_path", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  add_index "departments", ["name"], name: "index_departments_on_name"
 
   create_table "pages", force: :cascade do |t|
     t.string   "name",       null: false
