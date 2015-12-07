@@ -49,6 +49,12 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'foreigner'
 gem 'immigrant'
 
+# RDF
+gem 'sparql-client', '~> 1.1.6' # https://github.com/ruby-rdf/sparql-client
+gem 'rdf-raptor'
+gem 'sparql', '~> 1.1.9'
+gem 'rdf-turtle'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
