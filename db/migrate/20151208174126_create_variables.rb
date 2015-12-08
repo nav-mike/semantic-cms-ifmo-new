@@ -1,3 +1,5 @@
+# Migration for create variables.
+# @author nav-mike
 class CreateVariables < ActiveRecord::Migration
   def change
     create_table :variables do |t|
