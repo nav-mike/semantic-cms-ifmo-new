@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128122810) do
+ActiveRecord::Schema.define(version: 20151208174126) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -153,5 +153,16 @@ ActiveRecord::Schema.define(version: 20151128122810) do
   end
 
   add_index "students", ["name"], name: "index_students_on_name"
+
+  create_table "variables", force: :cascade do |t|
+    t.string   "name",                       null: false
+    t.string   "title"
+    t.text     "sparql"
+    t.boolean  "can_removed", default: true, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "variables", ["name"], name: "index_variables_on_name"
 
 end
