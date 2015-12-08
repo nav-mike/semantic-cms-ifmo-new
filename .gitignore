@@ -55,3 +55,4 @@ build/
 
 .byebug_history
 *.swp
+db/catalog-v001.xml
