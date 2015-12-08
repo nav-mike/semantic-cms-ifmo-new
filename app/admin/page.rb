@@ -8,7 +8,7 @@ ActiveAdmin.register Page do
       f.input :path, label: 'Path of table'
     end
     panel 'Markup' do
-      para 'Use <a href="#">ERB templates</a> fot page html and <a href="#">variables</a>'.html_safe
+      para 'Use <a href="#">ERB templates</a> fot page html and <a class="variablesBtn"  href="#">variables</a>'.html_safe
       inputs do
         f.input :html, label: 'Content'
       end

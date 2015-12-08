@@ -1,2 +1,4 @@
 $(document).ready ->
-  console.log 123
+  $('.variablesBtn').click ->
+    console.log 123
+    false
